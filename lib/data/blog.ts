@@ -2,6 +2,7 @@ export const blogData = {
   headline: "Insights, Stories, and Memories",
   subheading:
     "Explore technical articles written by our club members and take a look at our favorite moments from recent events.",
+
   articles: [
     {
       id: 1,
@@ -51,30 +52,39 @@ export const blogData = {
       showDiscussion: false,
     },
   ],
+
   gallery: [
     {
       id: 1,
+      image: "/gallery/ease-the-error-6.jpg",
+      title: "Ease the Error 6.0 – Organizing Team",
       caption:
-        "The FODSE Core Team for the 2026-2027 tenure at the orientation ceremony.",
-      aspectRatio: "square",
+        "The dedicated FODSE organizing team behind Ease the Error 6.0, working together to deliver a successful and impactful hackathon experience.",
+      aspectRatio: "landscape",
     },
     {
       id: 2,
+      image: "/gallery/ease-the-error-5.jpg",
+      title: "Ease the Error 5.0",
       caption:
-        "Ideation in progress—students brainstorming during the rapid prototyping workshop.",
+        "Participants, mentors, and organizers celebrating the success of Ease the Error 5.0, fostering creativity, teamwork, and technical excellence.",
       aspectRatio: "portrait",
     },
     {
       id: 3,
+      image: "/gallery/inauguration-2025-26.jpg",
+      title: "FODSE Inauguration 2025–2026",
       caption:
-        "Hands-on learning: A glimpse inside our technical masterclass sessions.",
+        "The official inauguration of the FODSE committee for the academic year 2025–2026, marking the beginning of another year of innovation, collaboration, and leadership.",
       aspectRatio: "landscape",
     },
     {
       id: 4,
+      image: "/gallery/sih-mentorship.jpg",
+      title: "Smart India Hackathon Mentorship",
       caption:
-        "Celebrating innovation—our event winners posing with their hard-earned tech gear and prizes.",
-      aspectRatio: "square",
+        "An interactive mentorship session guiding students on problem-solving, innovation, and project development for the Smart India Hackathon.",
+      aspectRatio: "landscape",
     },
   ],
 };

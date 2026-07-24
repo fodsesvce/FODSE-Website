@@ -1,11 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Camera, Image as ImageIcon } from "lucide-react";
+import Image from "next/image";
+import { Camera } from "lucide-react";
 
 type GalleryItem = {
   id: number;
+  title: string;
   caption: string;
+  image: string;
   aspectRatio: string;
 };
 
@@ -17,6 +20,7 @@ export default function GallerySection({ gallery }: Props) {
   return (
     <section className="py-16 sm:py-24">
       <div className="max-w-7xl mx-auto px-6">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,29 +30,34 @@ export default function GallerySection({ gallery }: Props) {
         >
           <div className="flex items-center gap-3 mb-2">
             <Camera size={24} className="text-accent" />
+
             <h2 className="font-display text-3xl font-bold text-text-primary">
               Gallery
             </h2>
           </div>
+
           <p className="text-text-muted text-sm">
             Moments captured from our events and activities.
           </p>
         </motion.div>
 
-        {/* Masonry-like grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-4 gap-5 space-y-5">
+        {/* Gallery */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {gallery.map((item, i) => (
             <motion.figure
               key={item.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="break-inside-avoid group"
+              transition={{
+                duration: 0.4,
+                delay: i * 0.08,
+              }}
+              className="group"
             >
-              {/* Placeholder */}
+              {/* Image Card */}
               <div
-                className={`relative w-full bg-surface border border-border rounded-2xl overflow-hidden ${
+                className={`relative bg-surface border border-border rounded-2xl overflow-hidden flex items-center justify-center p-2 transition-all duration-300 hover:shadow-xl ${
                   item.aspectRatio === "portrait"
                     ? "aspect-[3/4]"
                     : item.aspectRatio === "landscape"
@@ -56,22 +65,39 @@ export default function GallerySection({ gallery }: Props) {
                     : "aspect-square"
                 }`}
               >
-                {/* Gradient placeholder */}
-                <div className="absolute inset-0 bg-gradient-to-br from-surface via-accent-muted to-surface flex flex-col items-center justify-center">
-                  <ImageIcon size={36} className="text-text-faint mb-3" />
-                  <span className="text-xs text-text-faint font-medium">
-                    Photo {item.id}
-                  </span>
-                </div>
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <p className="text-white text-xs p-4 font-medium leading-snug">
-                    {item.caption}
-                  </p>
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width:768px) 100vw,
+                         (max-width:1024px) 50vw,
+                         25vw"
+                  className="object-contain p-2 transition-transform duration-300 group-hover:scale-105"
+                />
+
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-4">
+                    <h3 className="text-white font-semibold text-sm mb-1">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-white/90 text-xs leading-relaxed line-clamp-3">
+                      {item.caption}
+                    </p>
+                  </div>
                 </div>
               </div>
-              <figcaption className="mt-3 text-xs text-text-muted leading-snug px-1">
-                {item.caption}
+
+              {/* Caption */}
+              <figcaption className="mt-4 px-1">
+                <h3 className="font-semibold text-text-primary text-base mb-1">
+                  {item.title}
+                </h3>
+
+                <p className="text-xs text-text-muted leading-relaxed">
+                  {item.caption}
+                </p>
               </figcaption>
             </motion.figure>
           ))}

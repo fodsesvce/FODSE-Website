@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, Calendar, MessageSquare, Award, Search, Clock, ArrowUpRight } from "lucide-react";
+import { User, Calendar, Search, Clock, ArrowUpRight } from "lucide-react";
 
 type Article = {
   id: number;
@@ -187,35 +187,6 @@ export default function ArticlesSection({ articles }: Props) {
                       Read Article <ArrowUpRight size={14} />
                     </span>
                   </div>
-                </div>
-              </motion.div>
-            )}
-
-            {/* DISCUSSION ROW FOR FEATURED ARTICLE */}
-            {featuredArticle && featuredArticle.showDiscussion && (
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="rounded-2xl border border-accent/20 bg-accent-muted/20 p-6 flex flex-col md:flex-row gap-5 items-start md:items-center justify-between"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
-                    <MessageSquare size={16} className="text-accent-light" />
-                  </div>
-                  <div>
-                    <h4 className="font-display font-semibold text-text-primary text-sm mb-0.5">
-                      Join the tech discussion
-                    </h4>
-                    <p className="text-xs text-text-muted leading-relaxed">
-                      Contribute to our technical review and share your insights. Verified contributors receive certificate acknowledgements!
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 w-full md:w-auto shrink-0 bg-background/50 border border-accent/20 px-3.5 py-2 rounded-xl text-xs text-text-secondary font-medium">
-                  <Award size={14} className="text-accent-light" />
-                  <span>Interactive Certificate Included</span>
                 </div>
               </motion.div>
             )}

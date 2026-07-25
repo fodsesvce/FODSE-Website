@@ -23,7 +23,7 @@ export const teamData = {
       slug: "harish-s",
       image: "/team/harish-s.jpg",
       socials: {
-        linkedin: "https://linkedin.com/in/harish"
+        linkedin: "https://linkedin.com/in/harish-s-928015294"
       }
     },
     {
@@ -92,7 +92,7 @@ export const teamData = {
       year: "4th Year",
       slug: "prince-raj-j",
       image: "/team/prince-raj-j.jpg",
-      socials: { linkedin: "https://linkedin.com" }
+      socials: { linkedin: "https://www.linkedin.com/in/princerajjustinthiraviyam" }
     },
     {
       name: "Nihil P Rayen P",
@@ -101,17 +101,16 @@ export const teamData = {
       year: "4th Year",
       slug: "nihil-p-rayen-p",
       image: "/team/nihil-p-rayen-p.jpg",
-      socials: { linkedin: "https://linkedin.com" }
+      socials: { linkedin: "https://www.linkedin.com/in/nihil-p-rayen-p-011601295?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
     },
     {
-      name: "Jeevitha P",
-      role: "Mentor",
-      department: "ADS",
-      year: "4th Year",
-      slug: "jeevitha-p",
-      image: "/team/jeevitha-p.jpg",
-      socials: { linkedin: "https://www.linkedin.com/in/jeevitha-p-04b004293" }
-    },
+  name: "Jeevitha P",
+  role: "Mentor",
+  department: "ADS",
+  year: "4th Year",
+  slug: "jeevitha-p",
+  image: "/team/jeevitha-p.jpg",
+},
     {
       name: "Harini K",
       role: "Mentor",
@@ -261,7 +260,7 @@ export const teamData = {
         year: "3rd Year",
         slug: "dharshika-sampathkumar",
         image: "/team/dharshika-sampathkumar.jpg",
-        socials: { linkedin: "https://linkedin.com" }
+        socials: { linkedin: "https://www.linkedin.com/in/dharshika-sampathkumar-52038a354?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
       },
       executives: [
         {

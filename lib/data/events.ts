@@ -39,9 +39,8 @@ export const eventsData = {
     {
       id: 4,
       title: "Ease The Error 6.0",
-      timeline: "April 6th & 7th, 2024",
-      collaborators:
-        "Conducted with the combined effort of the Forum of Data Science Engineers (FODSE) and the Institution of Electronics and Telecommunication Engineers – Student's Forum (IETE).",
+      timeline: "March 16th & 17th, 2025",
+      collaborators: null,
       description:
         "A massive 24-hour inter-college Hackathon where teams pushed themselves to innovate new models and solutions for challenging problem statements.",
       highlights: [

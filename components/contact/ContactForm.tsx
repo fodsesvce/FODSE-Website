@@ -2,24 +2,36 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send } from "lucide-react";
+import { Send, Loader2 } from "lucide-react";
 
 type FormState = {
   name: string;
+  email: string;
   subject: string;
   message: string;
 };
 
 const MAX_MSG_LEN = 1000;
 
+const FORMSUBMIT_ENDPOINT =
+  "https://formsubmit.co/fodse@svce.ac.in";
+
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>({
     name: "",
+    email: "",
     subject: "",
     message: "",
   });
 
   const [errors, setErrors] = useState<Partial<FormState>>({});
+
+  const [loading, setLoading] = useState(false);
+
+  const [status, setStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -30,6 +42,8 @@ export default function ContactForm() {
       ...prev,
       [name]: value,
     }));
+
+    setStatus(null);
 
     if (errors[name as keyof FormState]) {
       setErrors((prev) => ({
@@ -42,78 +56,106 @@ export default function ContactForm() {
   const validate = () => {
     const newErrors: Partial<FormState> = {};
 
-    if (!form.name.trim())
+    if (!form.name.trim()) {
       newErrors.name = "Name is required.";
+    }
 
-    if (!form.subject.trim())
+    if (!form.email.trim()) {
+      newErrors.email = "Email is required.";
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(form.email)
+    ) {
+      newErrors.email = "Enter a valid email address.";
+    }
+
+    if (!form.subject.trim()) {
       newErrors.subject = "Subject is required.";
+    }
 
-    if (!form.message.trim())
+    if (!form.message.trim()) {
       newErrors.message = "Message is required.";
-    else if (form.message.length > MAX_MSG_LEN)
+    } else if (form.message.length > MAX_MSG_LEN) {
       newErrors.message = `Message must be ${MAX_MSG_LEN} characters or fewer.`;
+    }
 
     setErrors(newErrors);
 
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
+
+    setStatus(null);
 
     if (!validate()) return;
 
-    const recipient = "fodse@svce.ac.in";
+    try {
+      setLoading(true);
 
-    const subject = `FODSE Website | ${form.subject}`;
+      const formData = new FormData();
 
-    const body = `Hello FODSE Team,
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("subject", form.subject);
+      formData.append("message", form.message);
 
-A visitor has contacted you through the FODSE website.
+      // FormSubmit Settings
+      formData.append("_subject", `FODSE Website | ${form.subject}`);
+      formData.append("_captcha", "false");
+      formData.append("_template", "table");
+      formData.append("_replyto", form.email);
 
-----------------------------------------
+      // Honeypot spam protection
+      formData.append("_honey", "");
 
-Full Name:
-${form.name}
+      const response = await fetch(
+        FORMSUBMIT_ENDPOINT,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
-Subject:
-${form.subject}
+      if (!response.ok) {
+        throw new Error("Failed to send message.");
+      }
 
-Message:
+      setStatus({
+        type: "success",
+        message:
+          "Thank you! Your message has been sent successfully.",
+      });
 
-${form.message}
+      setForm({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
 
-----------------------------------------
-
-This message was sent through the FODSE website contact page.
-
-You can simply click Reply to respond to the sender.`;
-
-    const gmailComposeUrl =
-      `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1` +
-      `&to=${encodeURIComponent(recipient)}` +
-      `&su=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(body)}`;
-
-    window.open(gmailComposeUrl, "_blank");
-
-    setForm({
-      name: "",
-      subject: "",
-      message: "",
-    });
-
-    setErrors({});
+      setErrors({});
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message:
+          error instanceof Error
+            ? error.message
+            : "Something went wrong.",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const inputBase =
+    const inputBase =
     "w-full bg-background border rounded-xl px-4 py-3 text-text-primary text-sm placeholder:text-text-faint focus:outline-none focus:ring-2 transition-all duration-200";
 
-  const inputNormal =
-    `${inputBase} border-border focus:border-accent/60 focus:ring-accent/10`;
+  const inputNormal = `${inputBase} border-border focus:border-accent/60 focus:ring-accent/10`;
 
-  const inputError =
-    `${inputBase} border-red-400/70 focus:border-red-400 focus:ring-red-400/10`;
+  const inputError = `${inputBase} border-red-400/70 focus:border-red-400 focus:ring-red-400/10`;
 
   return (
     <motion.div
@@ -126,7 +168,45 @@ You can simply click Reply to respond to the sender.`;
         Send a Message
       </h2>
 
-      <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-5"
+        noValidate
+        autoComplete="on"
+      >
+        {/* FormSubmit Hidden Fields */}
+        <input
+          type="hidden"
+          name="_subject"
+          value={`FODSE Website | ${form.subject}`}
+        />
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="false"
+        />
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        />
+
+        <input
+          type="hidden"
+          name="_replyto"
+          value={form.email}
+        />
+
+        {/* Honeypot */}
+        <input
+          type="text"
+          name="_honey"
+          className="hidden"
+          tabIndex={-1}
+          autoComplete="off"
+        />
 
         {/* Name */}
         <div>
@@ -141,7 +221,9 @@ You can simply click Reply to respond to the sender.`;
             id="contact-name"
             name="name"
             type="text"
-            placeholder="Your name"
+            required
+            autoComplete="name"
+            placeholder="Your full name"
             value={form.name}
             onChange={handleChange}
             className={errors.name ? inputError : inputNormal}
@@ -154,7 +236,35 @@ You can simply click Reply to respond to the sender.`;
           )}
         </div>
 
-        {/* Subject */}
+        {/* Email */}
+        <div>
+          <label
+            htmlFor="contact-email"
+            className="block text-xs font-semibold text-text-muted mb-2 tracking-wide"
+          >
+            Email Address <span className="text-red-400">*</span>
+          </label>
+
+          <input
+            id="contact-email"
+            name="email"
+            type="email"
+            required
+            autoComplete="email"
+            placeholder="you@example.com"
+            value={form.email}
+            onChange={handleChange}
+            className={errors.email ? inputError : inputNormal}
+          />
+
+          {errors.email && (
+            <p className="mt-1.5 text-xs text-red-500">
+              {errors.email}
+            </p>
+          )}
+        </div>
+
+                {/* Subject */}
         <div>
           <label
             htmlFor="contact-subject"
@@ -167,6 +277,7 @@ You can simply click Reply to respond to the sender.`;
             id="contact-subject"
             name="subject"
             type="text"
+            required
             placeholder="What's this about?"
             value={form.subject}
             onChange={handleChange}
@@ -205,6 +316,7 @@ You can simply click Reply to respond to the sender.`;
             id="contact-message"
             name="message"
             rows={6}
+            required
             placeholder="Tell us how we can help..."
             value={form.message}
             onChange={handleChange}
@@ -218,18 +330,47 @@ You can simply click Reply to respond to the sender.`;
           )}
         </div>
 
+        {/* Status Message */}
+        {status && (
+          <motion.div
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className={`rounded-xl border px-4 py-3 text-sm font-medium ${
+              status.type === "success"
+                ? "border-green-500/30 bg-green-500/10 text-green-400"
+                : "border-red-500/30 bg-red-500/10 text-red-400"
+            }`}
+          >
+            {status.message}
+          </motion.div>
+        )}
+
+        {/* Submit Button */}
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-accent hover:bg-accent-light text-white font-semibold rounded-xl transition-all duration-200 shadow-lg shadow-accent/25"
+          disabled={loading}
+          className={`w-full flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-white font-semibold transition-all duration-200 ${
+            loading
+              ? "cursor-not-allowed bg-gray-500"
+              : "bg-accent hover:bg-accent-light shadow-lg shadow-accent/25 hover:shadow-xl"
+          }`}
         >
-          Continue with Gmail
-          <Send size={16} />
+          {loading ? (
+            <>
+              <Loader2 size={18} className="animate-spin" />
+              Sending...
+            </>
+          ) : (
+            <>
+              Send Message
+              <Send size={18} />
+            </>
+          )}
         </button>
 
-        <p className="text-xs text-center text-text-muted leading-relaxed">
-          Clicking <strong>Continue with Gmail</strong> opens Gmail with your
-          message pre-filled. Review it and click{" "}
-          <strong>Send</strong> to deliver it to the FODSE team.
+                <p className="text-xs text-center text-text-muted leading-relaxed">
+          Your message will be securely delivered to the FODSE team. We'll
+          respond to the email address you provide as soon as possible.
         </p>
       </form>
     </motion.div>

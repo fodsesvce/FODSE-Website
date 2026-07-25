@@ -12,9 +12,7 @@ export const teamData = {
       slug: "aswath-s",
       image: "/team/aswath-s.jpg",
       socials: {
-        linkedin: "https://linkedin.com/in/aswath",
-        github: "https://github.com/aswath",
-        email: "mailto:aswath@example.com"
+        linkedin: "http://www.linkedin.com/in/aswath-s-3a2971356"
       }
     },
     {
@@ -25,9 +23,7 @@ export const teamData = {
       slug: "harish-s",
       image: "/team/harish-s.jpg",
       socials: {
-        linkedin: "https://linkedin.com/in/harish",
-        github: "https://github.com/harish",
-        email: "mailto:harish@example.com"
+        linkedin: "https://linkedin.com/in/harish"
       }
     },
     {
@@ -38,9 +34,7 @@ export const teamData = {
       slug: "yeseswini-s",
       image: "/team/yeseswini-s.jpg",
       socials: {
-        linkedin: "https://linkedin.com/in/yeseswini",
-        github: "https://github.com/yeseswini",
-        email: "mailto:yeseswini@example.com"
+        linkedin: "http://www.linkedin.com/in/yeseswini-s-07641b321"
       }
     },
     {
@@ -51,8 +45,7 @@ export const teamData = {
       slug: "sharan-rt",
       image: "/team/sharan-rt.jpg",
       socials: {
-        linkedin: "https://linkedin.com/in/sharan",
-        email: "mailto:sharan@example.com"
+        linkedin: "https://www.linkedin.com/in/sharan-r-t-09a044346?utm_source=share_via&utm_content=profile&utm_medium=member_android"
       }
     },
     {
@@ -63,8 +56,7 @@ export const teamData = {
       slug: "jai-ganesh-s",
       image: "/team/jai-ganesh-s.jpg",
       socials: {
-        linkedin: "https://linkedin.com/in/jaiganesh",
-        email: "mailto:jaiganesh@example.com"
+        linkedin: "https://www.linkedin.com/in/jai-ganesh0310"
       }
     },
     {
@@ -75,8 +67,7 @@ export const teamData = {
       slug: "yuvaraj",
       image: "/team/yuvaraj.jpg",
       socials: {
-        linkedin: "https://linkedin.com/in/yuvaraj",
-        email: "mailto:yuvaraj@example.com"
+        linkedin: "https://www.linkedin.com/in/yuvaraj-bharath-ai/"
       }
     },
     {
@@ -87,8 +78,7 @@ export const teamData = {
       slug: "kaviya-m",
       image: "/team/kaviya-m.jpg",
       socials: {
-        linkedin: "https://linkedin.com/in/kaviya",
-        email: "mailto:kaviya@example.com"
+        linkedin: "https://www.linkedin.com/in/kaviya-maheswaran-10783b327"
       }
     },
   ],
@@ -120,7 +110,7 @@ export const teamData = {
       year: "4th Year",
       slug: "jeevitha-p",
       image: "/team/jeevitha-p.jpg",
-      socials: { linkedin: "https://linkedin.com" }
+      socials: { linkedin: "https://www.linkedin.com/in/jeevitha-p-04b004293" }
     },
     {
       name: "Harini K",
@@ -129,7 +119,7 @@ export const teamData = {
       year: "4th Year",
       slug: "harini-k",
       image: "/team/harini-k.jpg",
-      socials: { linkedin: "https://linkedin.com" }
+      socials: { linkedin: "https://in.linkedin.com/in/harinikamaladasan" }
     },
     {
       name: "Rupesh A",
@@ -138,7 +128,7 @@ export const teamData = {
       year: "4th Year",
       slug: "rupesh-a",
       image: "/team/rupesh-a.jpg",
-      socials: { linkedin: "https://linkedin.com" }
+      socials: { linkedin: "https://in.linkedin.com/in/rupesh-anandhan-a91397321" }
     },
   ],
 
@@ -154,7 +144,7 @@ export const teamData = {
         year: "3rd Year",
         slug: "harish-k",
         image: "/team/harish-k.jpg",
-        socials: { linkedin: "https://linkedin.com", github: "https://github.com" }
+        socials: { linkedin: "https://www.linkedin.com/in/harish-k-23588b326?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
       },
       executives: [
         {
@@ -164,7 +154,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "adhithya-p",
           image: "/team/adhithya-p.jpg",
-          socials: { linkedin: "https://linkedin.com", github: "https://github.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/adhithya-parthasarathy-8b2478420?utm_source=share_via&utm_content=profile&utm_medium=member_android"}
         },
         {
           name: "Kiranraj M",
@@ -173,7 +163,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "kiranraj-m",
           image: "/team/kiranraj-m.jpg",
-          socials: { linkedin: "https://linkedin.com", github: "https://github.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/kiran-raj-9410443ba?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
           name: "Gokul Jayandan R S",
@@ -182,7 +172,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "gokul-jayandan-rs",
           image: "/team/gokul-jayandan-rs.jpg",
-          socials: { linkedin: "https://linkedin.com", github: "https://github.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/gokul-jayandan-r-s-765538383?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
       ]
     },
@@ -196,7 +186,7 @@ export const teamData = {
         year: "3rd Year",
         slug: "kanisha-s",
         image: "/team/kanisha-s.jpg",
-        socials: { linkedin: "https://linkedin.com" }
+        socials: { linkedin: "https://www.linkedin.com/in/kanisha-s-479b19326" }
       },
       executives: [
         {
@@ -206,7 +196,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "sanjanasri-m",
           image: "/team/sanjanasri-m.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/sanjanasri-m-415570383?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
           name: "Sharmila C",
@@ -215,7 +205,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "sharmila-c",
           image: "/team/sharmila-c.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/sharmila-chandrasekaran-0463b1383?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
           name: "Prathik Bhurat H",
@@ -224,7 +214,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "prathik-bhurat-h",
           image: "/team/prathik-bhurat-h.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/prathik-bhurat-7b1b943b6?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
       ]
     },
@@ -238,7 +228,7 @@ export const teamData = {
         year: "3rd Year",
         slug: "tejashree-g",
         image: "/team/tejashree-g.jpg",
-        socials: { linkedin: "https://linkedin.com" }
+        socials: { linkedin: "https://www.linkedin.com/in/tejashree-ganesh-9ba660327?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
       },
       executives: [
         {
@@ -248,7 +238,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "hasini-j",
           image: "/team/hasini-j.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/hasini-j-922168384?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
           name: "P Rishi Srivatsan",
@@ -257,7 +247,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "p-rishi-srivatsan",
           image: "/team/p-rishi-srivatsan.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/p-rishi-srivatsan-3b01b43b0/" }
         },
       ]
     },
@@ -281,7 +271,7 @@ export const teamData = {
           year: "3rd Year",
           slug: "priyadharshini-g",
           image: "/team/priyadharshini-g.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/priya-dharshini-g-b73200328?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
           name: "M S Joshika",
@@ -290,7 +280,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "ms-joshika",
           image: "/team/ms-joshika.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/joshika-m-s-1a4556383?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
           name: "Akshita Sriraman",
@@ -299,7 +289,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "akshita-sriraman",
           image: "/team/akshita-sriraman.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/akshita-sriraman-648066222?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
           name: "V Hariharan",
@@ -308,7 +298,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "v-hariharan",
           image: "/team/v-hariharan.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/hari-haran-a84316356/" }
         },
       ]
     },
@@ -322,7 +312,7 @@ export const teamData = {
         year: "3rd Year",
         slug: "sandhoshivany-gn",
         image: "/team/sandhoshivany-gn.jpg",
-        socials: { linkedin: "https://linkedin.com" }
+        socials: { linkedin: "https://www.linkedin.com/in/sandhoshivany-g-n-0381b2333?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
       },
       executives: [
         {
@@ -332,7 +322,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "sahhashraa-kp",
           image: "/team/sahhashraa-kp.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/sahhashraa-k-p-831631383" }
         },
         {
           name: "Nithya Shiva Thirumalaivarathan",
@@ -341,7 +331,7 @@ export const teamData = {
           year: "2nd Year",
           slug: "nithya-shiva-thirumalaivarathan",
           image: "/team/nithya-shiva-thirumalaivarathan.jpg",
-          socials: { linkedin: "https://linkedin.com" }
+          socials: { linkedin: "https://www.linkedin.com/in/nithya-shiva-thirumalaivarathan-164aa13ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
       ]
     }

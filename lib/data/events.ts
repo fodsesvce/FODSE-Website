@@ -82,18 +82,7 @@ export const eventsData = {
         "Runner-up (Artificial Intelligence Track): Team TechTitans (Robinkumar and Magesh)",
         "Special Mention (Web Development Track): Team LSK (Kiran Sekar and LathikaaShri)",
       ],
-    },
-    {
-      id: 8,
-      title: "FODSE Club Inaugural Ceremony",
-      timeline: "September 20th, 2023",
-      collaborators:
-        "Organized by the Department of Electronics and Communication Engineering in collaboration with the Department of Information Technology at SVCE.",
-      description:
-        "A meticulously orchestrated launch ceremony establishing the official presence of the Forum of Data Science Engineers (FODSE).",
-      highlights: [
-        "Reached its pinnacle with the distribution of badges and certificates to the newly appointed office bearers and mentors, inspiring students toward the transformative potential of data science.",
-      ],
-    },
+    }
+    
   ],
 };

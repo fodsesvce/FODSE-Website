@@ -54,37 +54,41 @@ export const blogData = {
   ],
 
   gallery: [
-    {
-      id: 1,
-      image: "/gallery/ease-the-error-6.jpg",
-      title: "Ease the Error 6.0 – Organizing Team",
-      caption:
-        "The dedicated FODSE organizing team behind Ease the Error 6.0, working together to deliver a successful and impactful hackathon experience.",
-      aspectRatio: "landscape",
-    },
-    {
-      id: 2,
-      image: "/gallery/ease-the-error-5.jpg",
-      title: "Ease the Error 5.0",
-      caption:
-        "Participants, mentors, and organizers celebrating the success of Ease the Error 5.0, fostering creativity, teamwork, and technical excellence.",
-      aspectRatio: "portrait",
-    },
-    {
-      id: 3,
-      image: "/gallery/inauguration-2025-26.jpg",
-      title: "FODSE Inauguration 2025–2026",
-      caption:
-        "The official inauguration of the FODSE committee for the academic year 2025–2026, marking the beginning of another year of innovation, collaboration, and leadership.",
-      aspectRatio: "landscape",
-    },
-    {
-      id: 4,
-      image: "/gallery/sih-mentorship.jpg",
-      title: "Smart India Hackathon Mentorship",
-      caption:
-        "An interactive mentorship session guiding students on problem-solving, innovation, and project development for the Smart India Hackathon.",
-      aspectRatio: "landscape",
-    },
-  ],
+  {
+    id: 1,
+    slug: "ease-the-error-6",
+    image: "/gallery/ease-the-error-6.jpg",
+    title: "Ease the Error 6.0",
+    caption:
+      "The sixth edition of FODSE's flagship hackathon, bringing together students to solve real-world technical challenges through innovation and teamwork.",
+    aspectRatio: "landscape",
+  },
+  {
+    id: 2,
+    slug: "ease-the-error-5",
+    image: "/gallery/ease-the-error-5.jpg",
+    title: "Ease the Error 5.0",
+    caption:
+      "The fifth edition of FODSE's flagship hackathon, continuing our tradition of competitive coding, collaboration, and innovative problem solving.",
+    aspectRatio: "landscape",
+  },
+  {
+    id: 3,
+    slug: "inauguration-2025-26",
+    image: "/gallery/inauguration-2025-26.jpg",
+    title: "Inauguration 2025–2026",
+    caption:
+      "The official inauguration of the FODSE committee for the academic year 2025–2026.",
+    aspectRatio: "landscape",
+  },
+  {
+    id: 4,
+    slug: "sih-mentorship",
+    image: "/gallery/sih-mentorship.jpg",
+    title: "SIH Mentorship 2025",
+    caption:
+      "Mentorship sessions helping students prepare innovative solutions for Smart India Hackathon.",
+    aspectRatio: "landscape",
+  },
+],
 };

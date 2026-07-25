@@ -72,35 +72,38 @@ export default function SplashScreen() {
               ease: [0.16, 1, 0.3, 1],
             }}
             className="flex items-center gap-5"
+style={{ alignItems: "center" }}
           >
             {/* Logo */}
 
-            <motion.div
-              animate={{
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 2.5,
-                ease: "easeInOut",
-              }}
-              className="relative splash-float"
-            >
-              <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-2xl splash-logo-glow" />
+            {/* Logo */}
 
-              <Image
-                src="/logo.png"
-                alt="FODSE"
-                width={82}
-                height={82}
-                priority
-                className="relative splash-float"
-              />
-            </motion.div>
+<motion.div
+  animate={{
+    scale: [1, 1.05, 1],
+  }}
+  transition={{
+    repeat: Infinity,
+    duration: 2.5,
+    ease: "easeInOut",
+  }}
+  className="relative flex h-[82px] w-[82px] items-center justify-center splash-float flex-shrink-0"
+>
+  <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-2xl splash-logo-glow" />
+
+  <Image
+    src="/logo.png"
+    alt="FODSE"
+    width={82}
+    height={82}
+    priority
+    className="relative block"
+  />
+</motion.div>
 
             {/* Text */}
 
-            <div>
+            <div className="flex flex-col justify-center">
 
               <motion.h1
                 initial={{

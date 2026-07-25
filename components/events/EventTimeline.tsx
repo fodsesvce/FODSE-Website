@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Users2, ArrowRight, Sparkles } from "lucide-react";
+import { Calendar, Users2, Sparkles } from "lucide-react";
 
 type Event = {
   id: number;
@@ -130,27 +130,16 @@ export default function EventTimeline({ events }: Props) {
                     )}
                   </div>
 
-                  <div className="space-y-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
-                    {event.collaborators && (
-                      <p
-                        className="text-[10px] leading-relaxed italic border-t border-[#DBEAFE] pt-3 font-medium"
-                        style={{ color: '#475569' }}
-                      >
-                        {event.collaborators}
-                      </p>
-                    )}
-                    {/* CTA Button – premium gradient */}
-                    <button className="flex items-center justify-center gap-2 w-full py-2.5 rounded-[14px] font-bold text-xs text-white transition-all duration-300 cursor-pointer
-                      bg-gradient-to-b from-[#2563EB] to-[#3B82F6]
-                      hover:from-[#1D4ED8] hover:to-[#2563EB]
-                      shadow-md shadow-blue-500/25
-                      hover:shadow-lg hover:shadow-blue-500/40
-                      hover:-translate-y-0.5
-                    ">
-                      <span>Know More</span>
-                      <ArrowRight size={13} />
-                    </button>
-                  </div>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+  {event.collaborators && (
+    <p
+      className="text-[10px] leading-relaxed italic border-t border-[#DBEAFE] pt-3 font-medium"
+      style={{ color: "#475569" }}
+    >
+      {event.collaborators}
+    </p>
+  )}
+</div>
                 </div>
               </motion.div>
             );

@@ -110,6 +110,7 @@ export const teamData = {
   year: "4th Year",
   slug: "jeevitha-p",
   image: "/team/jeevitha-p.jpg",
+  socials: { linkedin: "https://www.linkedin.com/in/jeevitha-p-04b004293" }
 },
     {
       name: "Harini K",

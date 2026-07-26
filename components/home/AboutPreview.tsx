@@ -30,7 +30,7 @@ export default function AboutPreview() {
               What Drives Us
             </h2>
             <p className="text-text-muted text-lg leading-relaxed mb-8">
-              To cultivate a culture of data-driven thinking on campus — equipping
+              To cultivate a culture of data-driven thinking on campus - equipping
               students with the skills, mentorship, and platform they need to turn
               curiosity into capability, and ideas into impact.
             </p>

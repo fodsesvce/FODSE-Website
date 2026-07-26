@@ -33,13 +33,13 @@ export default function OurStory() {
               The Forum of Data Science Engineers (FODSE) was founded on{" "}
               <span className="text-text-secondary font-medium">6th December 2020</span>,
               born out of a collaborative initiative between IETE and AIT, SVCE. It
-              began with a simple observation — data science was rapidly emerging as
+              began with a simple observation - data science was rapidly emerging as
               one of the most transformative fields of our time, yet there was no
               single space on campus where students could explore it together.
             </p>
             <p className="text-text-muted text-lg leading-relaxed">
               A group of students who had already begun working in the field saw its
-              potential and set out to build that space — a forum where anyone curious
+              potential and set out to build that space - a forum where anyone curious
               about data, algorithms, and intelligent systems could learn, experiment,
               and grow under proper mentorship.
             </p>

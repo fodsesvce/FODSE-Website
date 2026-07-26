@@ -6,7 +6,7 @@ import { Eye, Target } from "lucide-react";
 const missionPoints = [
   "To provide structured mentorship and guidance for students working on Data Science and AI/ML projects",
   "To bridge the gap between classroom learning and industry-relevant skills",
-  "To create accessible opportunities — through workshops, webinars, and hands-on events — for students at every skill level",
+  "To create accessible opportunities - through workshops, webinars, and hands-on events - for students at every skill level",
   "To build a strong, collaborative community of data enthusiasts within SVCE",
 ];
 
@@ -30,7 +30,7 @@ export default function VisionMission() {
               Our Vision
             </h3>
             <p className="text-text-muted leading-relaxed">
-              To be the definitive hub at SVCE for data-driven innovation — a place
+              To be the definitive hub at SVCE for data-driven innovation - a place
               where students don't just learn concepts, but apply them to solve real
               problems, build real projects, and shape real careers.
             </p>

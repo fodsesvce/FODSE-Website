@@ -57,7 +57,7 @@ export default function MemberCard({ member, index }: Props) {
     >
       {/* ---------- IMAGE ---------- */}
 
-      <div className="relative w-full h-[360px] overflow-hidden border-b border-border">
+      <div className="relative w-full h-[420px] sm:h-[380px] lg:h-[360px] overflow-hidden border-b border-border">
         <Image
           src={member.image}
           alt={member.name}
@@ -65,12 +65,13 @@ export default function MemberCard({ member, index }: Props) {
           priority={index < 4}
           sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 25vw"
           className="
-            object-cover
-            object-center
-            transition-transform
-            duration-500
-            group-hover:scale-105
-          "
+  object-cover
+  object-top
+  sm:object-center
+  transition-transform
+  duration-500
+  group-hover:scale-105
+"
         />
 
         {/* Fallback gradient */}

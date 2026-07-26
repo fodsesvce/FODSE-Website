@@ -16,7 +16,6 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-// 🔥 Replace this with your WhatsApp Community Invite Link
 const WHATSAPP_COMMUNITY_LINK =
   "https://chat.whatsapp.com/DqFKvQx7H5rBt2XNqlT66Q?s=cl&p=a&ilr=1";
 
@@ -36,15 +35,25 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close drawer ONLY after route changes
   useEffect(() => {
-  if (mobileOpen) {
-    const id = requestAnimationFrame(() => {
-      setMobileOpen(false);
-    });
+  if (!mobileOpen) return;
 
-    return () => cancelAnimationFrame(id);
-  }
-}, [pathname, mobileOpen]);
+  const id = setTimeout(() => {
+    setMobileOpen(false);
+  }, 0);
+
+  return () => clearTimeout(id);
+}, [pathname]);
+
+  // Prevent body scrolling while drawer is open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   return (
     <>
@@ -57,7 +66,6 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
-
           <Link href="/" className="flex items-center gap-3 group shrink-0">
             <div className="relative w-9 h-9">
               <Image
@@ -76,7 +84,6 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-
           <nav className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => {
               const isActive =
@@ -113,20 +120,18 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop CTA */}
-
           <div className="hidden md:flex items-center gap-3 shrink-0">
             <Link
-  href={WHATSAPP_COMMUNITY_LINK}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center px-5 py-2 text-sm font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
->
-  Join FODSE
-</Link>
+              href={WHATSAPP_COMMUNITY_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-5 py-2 text-sm font-semibold text-white bg-accent hover:bg-accent-light rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            >
+              Join FODSE
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={() => setMobileOpen((v) => !v)}
@@ -139,60 +144,72 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Drawer */}
-
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -10,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            exit={{
-              opacity: 0,
-              y: -10,
-            }}
-            transition={{
-              duration: 0.2,
-            }}
-            className="fixed top-16 left-0 right-0 z-40 bg-background/95 backdrop-blur-lg border-b border-border md:hidden"
-          >
-            <nav className="flex flex-col px-6 py-4 gap-1">
-              {navLinks.map((link) => {
-                const isActive =
-                  link.href === "/"
-                    ? pathname === "/"
-                    : pathname.startsWith(link.href);
+          <>
+            {/* Overlay */}
+            <motion.div
+              className="fixed inset-0 z-[55] bg-black/30 md:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileOpen(false)}
+            />
 
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
-                      isActive
-                        ? "text-text-primary bg-surface font-semibold"
-                        : "text-text-muted hover:text-text-secondary hover:bg-surface"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
+            {/* Drawer */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: -10,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                y: -10,
+              }}
+              transition={{
+                duration: 0.2,
+              }}
+              className="fixed top-16 left-0 right-0 z-[60] bg-background/95 backdrop-blur-lg border-b border-border md:hidden"
+            >
+              <nav className="flex flex-col px-6 py-4 gap-1">
+                {navLinks.map((link) => {
+                  const isActive =
+                    link.href === "/"
+                      ? pathname === "/"
+                      : pathname.startsWith(link.href);
 
-              <Link
-  href={WHATSAPP_COMMUNITY_LINK}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-3 inline-flex items-center justify-center px-4 py-3 text-sm font-semibold text-white bg-accent rounded-lg hover:bg-accent-light transition-all duration-300"
->
-  Join FODSE
-</Link>
-            </nav>
-          </motion.div>
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMobileOpen(false)}
+                      className={`px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${
+                        isActive
+                          ? "text-text-primary bg-surface font-semibold"
+                          : "text-text-muted hover:text-text-secondary hover:bg-surface"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  );
+                })}
+
+                <Link
+                  href={WHATSAPP_COMMUNITY_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileOpen(false)}
+                  className="mt-3 inline-flex items-center justify-center px-4 py-3 text-sm font-semibold text-white bg-accent rounded-lg hover:bg-accent-light transition-all duration-300"
+                >
+                  Join FODSE
+                </Link>
+              </nav>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

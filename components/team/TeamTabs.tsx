@@ -25,8 +25,8 @@ export default function TeamTabs() {
   const [activeTab, setActiveTab] = useState<TabId>("officeBearers");
   const [isNavSticky, setIsNavSticky] = useState(false);
   const navSentinelRef = useRef<HTMLDivElement>(null);
-  const contentRef     = useRef<HTMLDivElement>(null);
-  const navRef         = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const navScrollRef = useRef<HTMLDivElement>(null);
 
   // Use IntersectionObserver to detect when the nav sentinel scrolls above the main navbar
   useEffect(() => {
@@ -51,9 +51,27 @@ export default function TeamTabs() {
   }, []);
 
   const handleTabClick = (id: TabId) => {
-    setActiveTab(id);
-    requestAnimationFrame(() => scrollToContent());
+  setActiveTab(id);
+
+  // Keep existing desktop behaviour
+  if (window.innerWidth >= 768) {
+    requestAnimationFrame(scrollToContent);
+  }
   };
+
+  useEffect(() => {
+  if (!navScrollRef.current) return;
+
+  const activeButton = navScrollRef.current.querySelector(
+    "[data-active='true']"
+  ) as HTMLButtonElement | null;
+
+  activeButton?.scrollIntoView({
+    behavior: "smooth",
+    inline: "center",
+    block: "nearest",
+  });
+}, [activeTab]);
 
   // ─── Data ───────────────────────────────────────────────────────────────
   const getActiveContent = () => {
@@ -97,34 +115,52 @@ export default function TeamTabs() {
     : execCount + (content?.lead ? 1 : 0);
   const colClass    = totalCards === 5 ? "xl:grid-cols-5" : "xl:grid-cols-4";
 
-  const navPill = (
-    <div
-      ref={navRef}
-      className="flex items-center gap-2 p-1.5 bg-white border border-blue-100/60 rounded-full shadow-[0_4px_25px_rgb(59,130,246,0.12)] overflow-x-auto"
-      style={{ scrollbarWidth: "none" } as React.CSSProperties}
-    >
-      {tabs.map((tab) => (
-        <button
-          key={tab.id}
-          onClick={() => handleTabClick(tab.id)}
-          className={`relative flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 whitespace-nowrap ${
-            activeTab === tab.id
-              ? "text-white"
-              : "text-blue-900/70 hover:text-blue-900 hover:bg-blue-50/50"
-          }`}
-        >
-          {activeTab === tab.id && (
-            <motion.span
-              layoutId="team-tab-active-bg"
-              className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-md"
-              transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
-            />
-          )}
-          <span className="relative z-10">{tab.label}</span>
-        </button>
-      ))}
-    </div>
-  );
+  const navPill = (fixed = false) => (
+  <div
+    ref={fixed ? undefined : navScrollRef}
+    className="
+      flex
+      items-center
+      gap-2
+      p-1.5
+      bg-white
+      rounded-full
+      overflow-x-auto
+      scroll-smooth
+    "
+    style={{
+      scrollbarWidth: "none",
+      WebkitOverflowScrolling: "touch",
+    } as React.CSSProperties}
+  >
+    {tabs.map((tab) => (
+      <button
+        key={tab.id}
+        data-active={activeTab === tab.id}
+        onClick={() => handleTabClick(tab.id)}
+        className={`relative flex-shrink-0 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 whitespace-nowrap ${
+          activeTab === tab.id
+            ? "text-white"
+            : "text-blue-900/70 hover:text-blue-900 hover:bg-blue-50/50"
+        }`}
+      >
+        {activeTab === tab.id && (
+          <motion.span
+            layoutId="team-tab-active-bg"
+            className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full shadow-md"
+            transition={{
+              type: "spring",
+              bounce: 0.15,
+              duration: 0.5,
+            }}
+          />
+        )}
+
+        <span className="relative z-10">{tab.label}</span>
+      </button>
+    ))}
+  </div>
+);
 
   return (
     <div className="bg-background-alt">
@@ -144,7 +180,7 @@ export default function TeamTabs() {
           className="flex items-center"
           aria-hidden={isNavSticky}
         >
-          {!isNavSticky && navPill}
+          {!isNavSticky && navPill(false)}
         </div>
       </div>
 
@@ -156,10 +192,12 @@ export default function TeamTabs() {
       {isNavSticky && (
         <div
           className="fixed z-50 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-blue-100/50 shadow-[0_2px_20px_rgba(59,130,246,0.1)]"
-          style={{ top: `${MAIN_NAV_HEIGHT}px` }}
+          style={{
+  top: "64px",
+}}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6" style={{ paddingTop: "14px", paddingBottom: "14px" }}>
-            {navPill}
+            {navPill(true)}
           </div>
         </div>
       )}
@@ -169,9 +207,8 @@ export default function TeamTabs() {
           well below the fixed nav bar at all scroll depths.
       */}
       <div
-        className="max-w-7xl mx-auto px-4 sm:px-6"
-        style={{ paddingTop: "48px", paddingBottom: "80px" }}
-      >
+  className="max-w-7xl mx-auto px-4 sm:px-6 pt-6 md:pt-12 pb-20"
+>
         {/* Scroll anchor for scrollToContent() */}
         <div ref={contentRef} />
 

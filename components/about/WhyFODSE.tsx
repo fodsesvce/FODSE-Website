@@ -8,13 +8,13 @@ const reasons = [
     icon: TrendingUp,
     title: "A Field of the Future",
     description:
-      "Data Science is one of the fastest-growing career domains today, opening doors across industries — from healthcare to finance to technology.",
+      "Data Science is one of the fastest-growing career domains today, opening doors across industries - from healthcare to finance to technology.",
   },
   {
     icon: Lightbulb,
     title: "Built on Real Experience",
     description:
-      "FODSE was founded by students who were already working in the field and understood firsthand what it takes to break into it — and wanted to make that path easier for others.",
+      "FODSE was founded by students who were already working in the field and understood firsthand what it takes to break into it - and wanted to make that path easier for others.",
   },
   {
     icon: BarChart2,

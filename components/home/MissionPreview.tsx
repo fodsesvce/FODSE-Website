@@ -21,7 +21,7 @@ export default function MissionPreview() {
           </blockquote>
           <div className="w-12 h-0.5 bg-accent mx-auto mb-8" />
           <p className="text-text-muted text-lg leading-relaxed">
-            What We Do — We host hands-on workshops, expert-led webinars,
+            What We Do - We host hands-on workshops, expert-led webinars,
             hackathons, and real-world case studies that go beyond textbooks.
             Whether you're just starting out or already building models, FODSE
             gives you a community, mentors, and the momentum to grow.

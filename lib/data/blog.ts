@@ -11,7 +11,7 @@ export const blogData = {
       author: "Magesh Manickam",
       date: "October 25, 2024",
       excerpt:
-        "In this engaging piece, the author invites readers to explore the transformative role of Neural Networks—the fundamental backbone of AI—and their significant influence on education. Discover how these advanced technologies reshape teaching methods and enhance student learning experiences.",
+        "In this engaging piece, the author invites readers to explore the transformative role of Neural Networks-the fundamental backbone of AI-and their significant influence on education. Discover how these advanced technologies reshape teaching methods and enhance student learning experiences.",
       showDiscussion: true,
     },
     {
@@ -21,7 +21,7 @@ export const blogData = {
       author: "K Adithi",
       date: "September 20, 2024",
       excerpt:
-        "In the vast, evolving landscape of technology, neural networks are not just a technical marvel—they are a digital reflection of how we think, adapt, and innovate. Imagine creating an artificial brain designed to mirror the very essence of human thought. They are the hidden architects behind self-driving cars, curated playlists, and advanced computer vision.",
+        "In the vast, evolving landscape of technology, neural networks are not just a technical marvel-they are a digital reflection of how we think, adapt, and innovate. Imagine creating an artificial brain designed to mirror the very essence of human thought. They are the hidden architects behind self-driving cars, curated playlists, and advanced computer vision.",
       showDiscussion: false,
     },
     {

@@ -73,7 +73,7 @@ export default function Hero() {
           FODSE is SVCE's premier community for students driven by curiosity in Data
           Science, Machine Learning, Artificial Intelligence, and Analytics. We bring
           together learners, builders, and thinkers who believe data isn't just
-          numbers — it's the language of tomorrow's decisions.
+          numbers - it's the language of tomorrow's decisions.
         </motion.p>
 
         {/* CTAs */}

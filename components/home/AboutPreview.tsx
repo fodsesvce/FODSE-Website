@@ -8,7 +8,7 @@ const stats = [
   { value: "7+", label: "Years Active" },
   { value: "8+", label: "Events Hosted" },
   { value: "200+", label: "Members Mentored" },
-  { value: "9+", label: "Alumni Network" },
+  { value: "15+", label: "Alumni Network" },
 ];
 
 export default function AboutPreview() {

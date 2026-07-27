@@ -7,7 +7,7 @@ const alumni = [
   {
     name: "Mauriya Vijayaramachandran",
     degree: "BE. ECE, 2017–2021",
-    badge: "Founder",
+    badge: null,
     current: "Currently pursuing PhD in AI at University of Erlangen Nuremberg, Germany",
   },
   {
@@ -61,6 +61,48 @@ const alumni = [
     badge: null,
     current:
       "Business Development Executive, WelkinRim Technologies (IITM Incubated)",
+  },
+  {
+    name: "Pragatheeshwar S",
+    degree: "B.Tech IT, 2021–2025",
+    badge: null,
+    current:
+      "Working Professional at SurveySparrow",
+  },
+  {
+    name: "Abhinav Krsihna M A",
+    degree: "B.Tech AI & DS, 2021–2025",
+    badge: null,
+    current:
+      "Working Professional at third i",
+  },
+  {
+    name: "Akeel Ahamed",
+    degree: "B.E CSE, 2022–2026",
+    badge: null,
+    current:
+      "Working Professional at Intellect Design Arena Ltd",
+  },
+  {
+    name: "Pavithraa Jawahar",
+    degree: "B.E CSE, 2022–2026",
+    badge: null,
+    current:
+      "Working Professional at Zoho",
+  },
+  {
+    name: "Aravindhan Chakravarthy",
+    degree: "B.E CSE, 2022–2026",
+    badge: null,
+    current:
+      "Working Professional at third i",
+  },
+  {
+    name: "Devesh S",
+    degree: "B.E CSE, 2022–2026",
+    badge: null,
+    current:
+      "Working Professional at third i",
   },
 ];
 

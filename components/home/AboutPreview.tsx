@@ -5,9 +5,9 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const stats = [
-  { value: "4+", label: "Years Active" },
+  { value: "7+", label: "Years Active" },
   { value: "8+", label: "Events Hosted" },
-  { value: "20+", label: "Members Mentored" },
+  { value: "200+", label: "Members Mentored" },
   { value: "9+", label: "Alumni Network" },
 ];
 

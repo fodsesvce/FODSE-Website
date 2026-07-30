@@ -10,7 +10,7 @@ export const teamData = {
       department: "ADS",
       year: "4th Year",
       slug: "aswath-s",
-      image: "/team/aswath-s.jpg",
+      image: "/team/aswath-s.webp",
       socials: {
         linkedin: "http://www.linkedin.com/in/aswath-s-3a2971356"
       }
@@ -21,7 +21,7 @@ export const teamData = {
       department: "ADS",
       year: "4th Year",
       slug: "harish-s",
-      image: "/team/harish-s.jpg",
+      image: "/team/harish-s.webp",
       socials: {
         linkedin: "https://linkedin.com/in/harish-s-928015294"
       }
@@ -32,7 +32,7 @@ export const teamData = {
       department: "ADS",
       year: "4th Year",
       slug: "yeseswini-s",
-      image: "/team/yeseswini-s.jpg",
+      image: "/team/yeseswini-s.webp",
       socials: {
         linkedin: "http://www.linkedin.com/in/yeseswini-s-07641b321"
       }
@@ -43,7 +43,7 @@ export const teamData = {
       department: "CSE",
       year: "3rd Year",
       slug: "sharan-rt",
-      image: "/team/sharan-rt.jpg",
+      image: "/team/sharan-rt.webp",
       socials: {
         linkedin: "https://www.linkedin.com/in/sharan-r-t-09a044346?utm_source=share_via&utm_content=profile&utm_medium=member_android"
       }
@@ -54,7 +54,7 @@ export const teamData = {
       department: "ADS",
       year: "3rd Year",
       slug: "jai-ganesh-s",
-      image: "/team/jai-ganesh-s.jpg",
+      image: "/team/jai-ganesh-s.webp",
       socials: {
         linkedin: "https://www.linkedin.com/in/jai-ganesh0310"
       }
@@ -65,7 +65,7 @@ export const teamData = {
       department: "ADS",
       year: "2nd Year",
       slug: "yuvaraj",
-      image: "/team/yuvaraj.jpg",
+      image: "/team/yuvaraj.webp",
       socials: {
         linkedin: "https://www.linkedin.com/in/yuvaraj-bharath-ai/"
       }
@@ -76,7 +76,7 @@ export const teamData = {
       department: "CSE",
       year: "3rd Year",
       slug: "kaviya-m",
-      image: "/team/kaviya-m.jpg",
+      image: "/team/kaviya-m.webp",
       socials: {
         linkedin: "https://www.linkedin.com/in/kaviya-maheswaran-10783b327"
       }
@@ -91,7 +91,7 @@ export const teamData = {
       department: "CSE",
       year: "4th Year",
       slug: "prince-raj-j",
-      image: "/team/prince-raj-j.jpg",
+      image: "/team/prince-raj-j.webp",
       socials: { linkedin: "https://www.linkedin.com/in/princerajjustinthiraviyam" }
     },
     {
@@ -100,7 +100,7 @@ export const teamData = {
       department: "ADS",
       year: "4th Year",
       slug: "nihil-p-rayen-p",
-      image: "/team/nihil-p-rayen-p.jpg",
+      image: "/team/nihil-p-rayen-p.webp",
       socials: { linkedin: "https://www.linkedin.com/in/nihil-p-rayen-p-011601295?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
     },
     {
@@ -109,7 +109,7 @@ export const teamData = {
   department: "ADS",
   year: "4th Year",
   slug: "jeevitha-p",
-  image: "/team/jeevitha-p.jpg",
+  image: "/team/jeevitha-p.webp",
   socials: { linkedin: "https://www.linkedin.com/in/jeevitha-p-04b004293" }
 },
     {
@@ -118,7 +118,7 @@ export const teamData = {
       department: "ADS",
       year: "4th Year",
       slug: "harini-k",
-      image: "/team/harini-k.jpg",
+      image: "/team/harini-k.webp",
       socials: { linkedin: "https://in.linkedin.com/in/harinikamaladasan" }
     },
     {
@@ -127,7 +127,7 @@ export const teamData = {
       department: "ADS",
       year: "4th Year",
       slug: "rupesh-a",
-      image: "/team/rupesh-a.jpg",
+      image: "/team/rupesh-a.webp",
       socials: { linkedin: "https://in.linkedin.com/in/rupesh-anandhan-a91397321" }
     },
   ],
@@ -143,7 +143,7 @@ export const teamData = {
         department: "ADS",
         year: "3rd Year",
         slug: "harish-k",
-        image: "/team/harish-k.jpg",
+        image: "/team/harish-k.webp",
         socials: { linkedin: "https://www.linkedin.com/in/harish-k-23588b326?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
       },
       executives: [
@@ -153,7 +153,7 @@ export const teamData = {
           department: "ADS",
           year: "2nd Year",
           slug: "adhithya-p",
-          image: "/team/adhithya-p.jpg",
+          image: "/team/adhithya-p.webp",
           socials: { linkedin: "https://www.linkedin.com/in/adhithya-parthasarathy-8b2478420?utm_source=share_via&utm_content=profile&utm_medium=member_android"}
         },
         {
@@ -162,7 +162,7 @@ export const teamData = {
           department: "ADS",
           year: "2nd Year",
           slug: "kiranraj-m",
-          image: "/team/kiranraj-m.jpg",
+          image: "/team/kiranraj-m.webp",
           socials: { linkedin: "https://www.linkedin.com/in/kiran-raj-9410443ba?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
@@ -171,7 +171,7 @@ export const teamData = {
           department: "ADS",
           year: "2nd Year",
           slug: "gokul-jayandan-rs",
-          image: "/team/gokul-jayandan-rs.jpg",
+          image: "/team/gokul-jayandan-rs.webp",
           socials: { linkedin: "https://www.linkedin.com/in/gokul-jayandan-r-s-765538383?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
       ]
@@ -185,7 +185,7 @@ export const teamData = {
         department: "CSE",
         year: "3rd Year",
         slug: "kanisha-s",
-        image: "/team/kanisha-s.jpg",
+        image: "/team/kanisha-s.webp",
         socials: { linkedin: "https://www.linkedin.com/in/kanisha-s-479b19326" }
       },
       executives: [
@@ -195,7 +195,7 @@ export const teamData = {
           department: "ADS",
           year: "2nd Year",
           slug: "sanjanasri-m",
-          image: "/team/sanjanasri-m.jpg",
+          image: "/team/sanjanasri-m.webp",
           socials: { linkedin: "https://www.linkedin.com/in/sanjanasri-m-415570383?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
@@ -204,7 +204,7 @@ export const teamData = {
           department: "ADS",
           year: "2nd Year",
           slug: "sharmila-c",
-          image: "/team/sharmila-c.jpg",
+          image: "/team/sharmila-c.webp",
           socials: { linkedin: "https://www.linkedin.com/in/sharmila-chandrasekaran-0463b1383?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
@@ -213,7 +213,7 @@ export const teamData = {
           department: "CSE",
           year: "2nd Year",
           slug: "prathik-bhurat-h",
-          image: "/team/prathik-bhurat-h.jpg",
+          image: "/team/prathik-bhurat-h.webp",
           socials: { linkedin: "https://www.linkedin.com/in/prathik-bhurat-7b1b943b6?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
       ]
@@ -227,7 +227,7 @@ export const teamData = {
         department: "ADS",
         year: "3rd Year",
         slug: "tejashree-g",
-        image: "/team/tejashree-g.jpg",
+        image: "/team/tejashree-g.webp",
         socials: { linkedin: "https://www.linkedin.com/in/tejashree-ganesh-9ba660327?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
       },
       executives: [
@@ -237,7 +237,7 @@ export const teamData = {
           department: "ADS",
           year: "2nd Year",
           slug: "hasini-j",
-          image: "/team/hasini-j.jpg",
+          image: "/team/hasini-j.webp",
           socials: { linkedin: "https://www.linkedin.com/in/hasini-j-922168384?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
@@ -246,7 +246,7 @@ export const teamData = {
           department: "CSE",
           year: "2nd Year",
           slug: "p-rishi-srivatsan",
-          image: "/team/p-rishi-srivatsan.jpg",
+          image: "/team/p-rishi-srivatsan.webp",
           socials: { linkedin: "https://www.linkedin.com/in/p-rishi-srivatsan-3b01b43b0/" }
         },
       ]
@@ -260,7 +260,7 @@ export const teamData = {
         department: "ADS",
         year: "3rd Year",
         slug: "dharshika-sampathkumar",
-        image: "/team/dharshika-sampathkumar.jpg",
+        image: "/team/dharshika-sampathkumar.webp",
         socials: { linkedin: "https://www.linkedin.com/in/dharshika-sampathkumar-52038a354?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
       },
       executives: [
@@ -270,7 +270,7 @@ export const teamData = {
           department: "ADS",
           year: "3rd Year",
           slug: "priyadharshini-g",
-          image: "/team/priyadharshini-g.jpg",
+          image: "/team/priyadharshini-g.webp",
           socials: { linkedin: "https://www.linkedin.com/in/priya-dharshini-g-b73200328?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
@@ -279,7 +279,7 @@ export const teamData = {
           department: "CSE",
           year: "2nd Year",
           slug: "ms-joshika",
-          image: "/team/ms-joshika.jpg",
+          image: "/team/ms-joshika.webp",
           socials: { linkedin: "https://www.linkedin.com/in/joshika-m-s-1a4556383?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
@@ -288,7 +288,7 @@ export const teamData = {
           department: "CSE",
           year: "2nd Year",
           slug: "akshita-sriraman",
-          image: "/team/akshita-sriraman.jpg",
+          image: "/team/akshita-sriraman.webp",
           socials: { linkedin: "https://www.linkedin.com/in/akshita-sriraman-648066222?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
         {
@@ -297,7 +297,7 @@ export const teamData = {
           department: "CSE",
           year: "2nd Year",
           slug: "v-hariharan",
-          image: "/team/v-hariharan.jpg",
+          image: "/team/v-hariharan.webp",
           socials: { linkedin: "https://www.linkedin.com/in/hari-haran-a84316356/" }
         },
       ]
@@ -311,7 +311,7 @@ export const teamData = {
         department: "ADS",
         year: "3rd Year",
         slug: "sandhoshivany-gn",
-        image: "/team/sandhoshivany-gn.jpg",
+        image: "/team/sandhoshivany-gn.webp",
         socials: { linkedin: "https://www.linkedin.com/in/sandhoshivany-g-n-0381b2333?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
       },
       executives: [
@@ -321,7 +321,7 @@ export const teamData = {
           department: "ADS",
           year: "2nd Year",
           slug: "sahhashraa-kp",
-          image: "/team/sahhashraa-kp.jpg",
+          image: "/team/sahhashraa-kp.webp",
           socials: { linkedin: "https://www.linkedin.com/in/sahhashraa-k-p-831631383" }
         },
         {
@@ -330,7 +330,7 @@ export const teamData = {
           department: "CSE",
           year: "2nd Year",
           slug: "nithya-shiva-thirumalaivarathan",
-          image: "/team/nithya-shiva-thirumalaivarathan.jpg",
+          image: "/team/nithya-shiva-thirumalaivarathan.webp",
           socials: { linkedin: "https://www.linkedin.com/in/nithya-shiva-thirumalaivarathan-164aa13ab?utm_source=share_via&utm_content=profile&utm_medium=member_android" }
         },
       ]

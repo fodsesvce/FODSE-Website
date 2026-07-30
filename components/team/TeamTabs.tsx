@@ -323,13 +323,25 @@ export default function TeamTabs() {
                     </div>
                   )}
 
-                  {content.executives?.map((member, index) => (
-                    <MemberCard
-                      key={member.slug}
-                      member={member}
-                      index={index + 1}
-                    />
-                  ))}
+                  {content.executives?.map((member, index) => {
+  const showLeadBadge =
+    member.role.toLowerCase().includes("editorial lead");
+
+  return (
+    <div key={member.slug} className="relative">
+      {showLeadBadge && (
+        <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[10px] font-bold tracking-wider uppercase px-3 py-1 rounded-full shadow-md">
+          Lead
+        </div>
+      )}
+
+      <MemberCard
+        member={member}
+        index={index + 1}
+      />
+    </div>
+  );
+})}
                 </div>
               )}
             </motion.div>

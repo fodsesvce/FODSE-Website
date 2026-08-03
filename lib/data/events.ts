@@ -4,6 +4,24 @@ export const eventsData = {
     "From hands-on technical workshops to massive competitive hackathons, dive into the events that drive innovation and collaboration at FODSE.",
   events: [
     {
+  id: 0,
+  title: "HeatCode 2026",
+  timeline: "8–9 August 2026",
+  collaborators: "Faculty of Data Science and Engineering (FODSE)",
+  image: "/events/heatcode.jpeg",
+  website: "https://heatcode-eight.vercel.app",
+  description:
+    "HeatCode 2026 is FODSE's Machine Learning competition that brings together students to solve real-world AI and ML challenges through the official Kaggle platform.",
+
+  highlights: [
+    "Online Machine Learning Competition",
+    "Official Kaggle Challenge",
+    "Teams of Two",
+    "Cash Prizes & Participation Certificates",
+  ],
+},
+    {
+      
       id: 1,
       title: "United Nations Day ML Challenge",
       timeline: null,

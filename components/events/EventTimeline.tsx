@@ -7,6 +7,7 @@ import Image from "next/image";
 type Event = {
   id: number;
   title: string;
+  subtitle?: string;
   timeline: string | null;
   collaborators: string | null;
   description: string;
@@ -126,9 +127,17 @@ className="group relative h-[620px] rounded-3xl overflow-hidden bg-surface borde
                       <Sparkles size={12} />
                       <span>{event.collaborators ? "Collaboration" : "Internal Event"}</span>
                     </div>
-                    <h4 className="font-display text-lg font-bold text-text-primary line-clamp-2 leading-snug group-hover:text-accent-light transition-colors duration-200">
-                      {event.title}
-                    </h4>
+                    <div>
+  <h4 className="font-display text-lg font-bold text-text-primary leading-snug group-hover:text-accent-light transition-colors duration-200">
+    {event.title}
+  </h4>
+
+  {event.subtitle && (
+    <p className="mt-1 text-sm text-text-muted font-medium">
+      {event.subtitle}
+    </p>
+  )}
+</div>
                   </div>
                   {/* Date & Bottom Footer */}
                   <div className="border-t border-border-subtle pt-4 flex items-center justify-between text-xs text-text-muted">

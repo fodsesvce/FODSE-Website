@@ -4,8 +4,9 @@ export const eventsData = {
     "From hands-on technical workshops to massive competitive hackathons, dive into the events that drive innovation and collaboration at FODSE.",
   events: [
     {
-  id: 0,
+  id: 1,
   title: "HeatCode 2026",
+  subtitle: "Batch 2026–2027 • Event Starts",
   timeline: "8–9 August 2026",
   collaborators: "Faculty of Data Science and Engineering (FODSE)",
   image: "/events/heatcode.jpeg",
@@ -22,7 +23,7 @@ export const eventsData = {
 },
     {
       
-      id: 1,
+      id: 2,
       title: "United Nations Day ML Challenge",
       timeline: null,
       collaborators: null,
@@ -33,7 +34,7 @@ export const eventsData = {
       ],
     },
     {
-      id: 2,
+      id: 3,
       title: "Workshop on Essential Azure",
       timeline: null,
       collaborators: null,
@@ -44,7 +45,7 @@ export const eventsData = {
       ],
     },
     {
-      id: 3,
+      id: 4,
       title: "Peer-to-Peer Mentorship Programme (Advanced)",
       timeline: null,
       collaborators: null,
@@ -55,7 +56,7 @@ export const eventsData = {
       ],
     },
     {
-      id: 4,
+      id: 5,
       title: "Ease The Error 6.0",
       timeline: "March 16th & 17th, 2025",
       collaborators: null,
@@ -66,7 +67,7 @@ export const eventsData = {
       ],
     },
     {
-      id: 5,
+      id: 6,
       title: "Mentorship Program (Python & Data Science Basics)",
       timeline: null,
       collaborators: null,
@@ -77,7 +78,7 @@ export const eventsData = {
       ],
     },
     {
-      id: 6,
+      id: 7,
       title: "Viz-A-Thon: The Art of Visual Data",
       timeline: "October 27th, 2023",
       collaborators: null,
@@ -88,7 +89,7 @@ export const eventsData = {
       ],
     },
     {
-      id: 7,
+      id: 8,
       title: "Scraper's Soiree",
       timeline: null,
       collaborators: null,

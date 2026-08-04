@@ -8,7 +8,7 @@ export const eventsData = {
   title: "HeatCode 2026",
   subtitle: "Batch 2026–2027 • Event Starts",
   timeline: "8–9 August 2026",
-  collaborators: "Faculty of Data Science and Engineering (FODSE)",
+  collaborators: "Forum Of Data Science Engineers(FODSE)",
   image: "/events/heatcode.jpeg",
   website: "https://heatcode-eight.vercel.app",
   description:
